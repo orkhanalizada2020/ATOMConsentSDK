@@ -5,7 +5,7 @@
 //  Created by Orkhan Alizada on 19.11.24.
 //
 
-public final class ATOMConsent {
+public final class ATOMTCFConsent {
         
     private let consentData: Data
     
@@ -19,12 +19,12 @@ public final class ATOMConsent {
     }
     
     public func isVendorAllowed(_ vendorId: ATOMVendorIdentifier) -> Bool {
-        guard let validator = try? ATOMConsentValidator(consentData: consentData) else { return false }
+        guard let validator = try? ATOMTCFConsentValidator(consentData: consentData) else { return false }
         return validator.isVendorAllowed(vendorId: vendorId)
     }
     
     public func isPurposeAllowed(_ purposeId: ATOMPurposeIdentifier) -> Bool {
-        guard let validator = try? ATOMConsentValidator(consentData: consentData) else { return false }
+        guard let validator = try? ATOMTCFConsentValidator(consentData: consentData) else { return false }
         return validator.isPurposeConsentAllowed(purposeId)
     }
     

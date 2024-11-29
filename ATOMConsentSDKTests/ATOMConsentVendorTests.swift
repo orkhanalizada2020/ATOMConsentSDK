@@ -8,11 +8,11 @@
 import XCTest
 @testable import ATOMConsentSDK
 
-class ATOMConsentVendorTests: XCTestCase {
+class ATOMTCFConsentVendorTests: XCTestCase {
     
     let tcf: String = "CP24RUAP4HX0AAFADCENAiEgAKAAAAAAAAYgJmtF5Gd_YSZq8Dr3aZt0eYVP99hbasQhBhcBE2QBxLvW_BgRx2ExNA2qpiIKmBIEuXZAIQBlHIHURViAaogVogFkYkGcATEIB6BkgEMQE2cYCFRvmYtjWQCY59p5diax2D8tNYnEzdzjTsVHl3c5NmUkIBCcQ58JDbH9bRKb85IOJ_xsv4r0cF_rgG_WCVn_lcrrbBuudFMavHUiChC9AARAAoAC4AKAAqABwADwAIAASAAugBgAGMANAA1ABwADwAI4ATAAoQBSAFMAKoAWwAxABmADQAG8APQAfgBCACGgEQARIAjgBLACaAE4AKMAYEAygDLAGiAOQAdEA7gDvAHsAPiAfYB-wD_AQAAg4BFICLAIwARqAjgCOgEiAJKASkAmgBOwCfgFBgKgAqIBVwC5gF1AL0AX0Az4BogDXgG0ANwAcQA44B0gDqAHbAPaAfYBEwCL4EeAR7AkQCRYEqASqAmcBNoCdoFHgUiApOBTQFNgKfAVDAqQCpQFVAKsAV2AsKBYgFigLKAWiAtQBbIC3AFwALoAXaAu-BeQF5gL6AX-AwQBgwDDQGIAMhgZGBkgDJwGVAMsAZmAzkBngDRAGjANNAamA1WBrAGsgNeAbQA26BuYG6gN8AcAA4IBx4Dk4HLAcuA58B1gDtgHcgPFAePA8kDygHxQPkA-UB9ID64H2gfdA_YD9wIAgQEAgYBA8CCMEEwQUAgwBBsCEIEKIIWghcBDOCHIIdQQ8BD0CH4EUwI0gRrAjeBHECOgEdgI9gR_AkIBIgCRQEjQJIASSAkoBJkCUYEqAJaQS3BLgCXYEvoJgAmCBMMCYoExwJkwTMBM0IKAAAAA.YAAAAAAAAAAA"
     
-    var sut: ATOMConsent?
+    var sut: ATOMTCFConsent?
     
     override func setUpWithError() throws {
         try super.setUpWithError()
@@ -20,7 +20,7 @@ class ATOMConsentVendorTests: XCTestCase {
     }
     
     func testVendor_99_NOT_Allowed() {
-        guard let sut = try? ATOMConsent(withConsentString: tcf) else {
+        guard let sut = try? ATOMTCFConsent(withConsentString: tcf) else {
             fatalError("Could not initialize ATOMConsent.")
         }
         
@@ -28,7 +28,7 @@ class ATOMConsentVendorTests: XCTestCase {
     }
     
     func testVendor_100_Allowed() {
-        guard let sut = try? ATOMConsent(withConsentString: tcf) else {
+        guard let sut = try? ATOMTCFConsent(withConsentString: tcf) else {
             fatalError("Could not initialize ATOMConsent.")
         }
         
@@ -36,7 +36,7 @@ class ATOMConsentVendorTests: XCTestCase {
     }
     
     func testVendor_512_NOT_Allowed() {
-        guard let sut = try? ATOMConsent(withConsentString: tcf) else {
+        guard let sut = try? ATOMTCFConsent(withConsentString: tcf) else {
             fatalError("Could not initialize ATOMConsent.")
         }
         

@@ -1,11 +1,11 @@
 //
-//  ATOMConsentValidator.swift
+//  ATOMTCFConsentValidator.swift
 //  ATOMConsentSDK
 //
 //  Created by Orkhan Alizada on 19.11.24.
 //
 
-public final class ATOMConsentValidator {
+public final class ATOMTCFConsentValidator {
     
     private let vendorIdentifierSize: Int = 16
     private let bitFieldVendorConsentStart: Int = 230
