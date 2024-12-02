@@ -28,4 +28,13 @@ public final class ATOMTCFConsent {
         return validator.isPurposeConsentAllowed(purposeId)
     }
     
+    public func arePurposesAllowed(_ purposeIds: [ATOMPurposeIdentifier]) -> Bool {
+        guard let validator = try? ATOMTCFConsentValidator(consentData: consentData) else { return false }
+        
+        for purposeId in purposeIds {
+            if !validator.isPurposeConsentAllowed(purposeId) { return false }
+        }
+        return true
+    }
+    
 }

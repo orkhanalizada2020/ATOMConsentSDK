@@ -43,6 +43,30 @@ class ATOMTCFConsentPurposeTests: XCTestCase {
         XCTAssertTrue(sut.isPurposeAllowed(3), "Purpose 3 should be allowed")
     }
     
+    func testMultiplePurposes_1_3_Allowed_Should_Succeed() {
+        guard let sut = try? ATOMTCFConsent(withConsentString: tcf) else {
+            fatalError("Could not initialize ATOMConsent.")
+        }
+        
+        XCTAssertTrue(sut.arePurposesAllowed([1, 3]), "Purposes 1 and 3 should be allowed")
+    }
+    
+    func testMultiplePurposes_1_3_Allowed_7_9_10_NOT_Allowed_Should_Fail() {
+        guard let sut = try? ATOMTCFConsent(withConsentString: tcf) else {
+            fatalError("Could not initialize ATOMConsent.")
+        }
+        
+        XCTAssertFalse(sut.arePurposesAllowed([1, 3, 7, 9, 10]), "Purposes 1, 3, 7, 9, and 10 should be allowed")
+    }
+    
+    func testMultiplePurposes_1_3_7_9_10_Allowed_5_NOT_Allowed_Should_Fail() {
+        guard let sut = try? ATOMTCFConsent(withConsentString: tcf) else {
+            fatalError("Could not initialize ATOMConsent.")
+        }
+        
+        XCTAssertFalse(sut.arePurposesAllowed([1, 3, 5, 7, 9, 10]), "Purposes 1, 3, 7, 9, and 10 should be allowed, 5 **not** should be allowed and test should fail.")
+    }
+    
     override func tearDownWithError() throws {
         sut = nil
         
