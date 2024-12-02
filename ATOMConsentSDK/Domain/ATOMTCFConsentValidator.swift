@@ -5,6 +5,8 @@
 //  Created by Orkhan Alizada on 19.11.24.
 //
 
+import Foundation
+
 public final class ATOMTCFConsentValidator {
     
     private let vendorIdentifierSize: Int = 16

@@ -5,6 +5,8 @@
 //  Created by Orkhan Alizada on 19.11.24.
 //
 
+import Foundation
+
 extension NSRange {
     static let version = NSRange(location: 0, length: 6)
     static let created = NSRange(location: 6, length: 36)

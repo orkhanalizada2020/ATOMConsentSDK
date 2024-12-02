@@ -1,0 +1,6 @@
+framework module ATOMConsentSDK {
+    umbrella header "ATOMConsentSDK.h"
+    
+    export *
+    module * { export * }
+}

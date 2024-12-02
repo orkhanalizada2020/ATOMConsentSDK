@@ -5,6 +5,8 @@
 //  Created by Orkhan Alizada on 19.11.24.
 //
 
+import Foundation
+
 public typealias ATOMVendorIdentifier = Int16
 public typealias ATOMPurposeIdentifier = Int16
 
