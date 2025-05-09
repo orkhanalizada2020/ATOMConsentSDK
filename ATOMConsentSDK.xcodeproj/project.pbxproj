@@ -21,6 +21,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6F33ACC52DCE239B003EC279 /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 		6F39F5512CFE026800E86164 /* ATOMConsentSDK.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = ATOMConsentSDK.modulemap; sourceTree = "<group>"; };
 		6FA920DA2CED3663009770A6 /* ATOMConsentSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ATOMConsentSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6FA920E42CED3664009770A6 /* ATOMConsentSDKTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ATOMConsentSDKTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -72,6 +73,7 @@
 		6FA920D02CED3663009770A6 = {
 			isa = PBXGroup;
 			children = (
+				6F33ACC52DCE239B003EC279 /* Package.swift */,
 				6F39F5512CFE026800E86164 /* ATOMConsentSDK.modulemap */,
 				6FA920DC2CED3663009770A6 /* ATOMConsentSDK */,
 				6FA920E82CED3664009770A6 /* ATOMConsentSDKTests */,
