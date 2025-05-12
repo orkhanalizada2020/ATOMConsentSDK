@@ -43,6 +43,27 @@ class ATOMConsentCCPATests: XCTestCase {
         }
     }
     
+    func testCCPA_Case_Sensitivity() throws {
+        let sut1 = try ATOMConsentSDK(ccpaConsentString: "--y-")
+        XCTAssertFalse(sut1.isSaleAllowed(), "Should recognize lowercase 'y' as opt-out")
+        
+        let sut2 = try ATOMConsentSDK(ccpaConsentString: "--n-")
+        XCTAssertTrue(sut2.isSaleAllowed(), "Should recognize lowercase 'n' as not opted-out")
+    }
+    
+    func testCCPAConsent_Direct_Initialization() throws {
+        let consent = try ATOMCCPAConsent(consentString: "--N-")
+        XCTAssertTrue(consent.isSaleAllowed())
+        
+        let consentOptOut = try ATOMCCPAConsent(consentString: "--Y-")
+        XCTAssertFalse(consentOptOut.isSaleAllowed())
+    }
+    
+    func testCCPA_With_Unusual_Characters() throws {
+        let sut = try ATOMConsentSDK(ccpaConsentString: "?X!N")
+        XCTAssertTrue(sut.isSaleAllowed(), "Sale should be allowed with valid length and 'N' opt-out")
+    }
+    
     override func tearDownWithError() throws {
         try super.tearDownWithError()
     }

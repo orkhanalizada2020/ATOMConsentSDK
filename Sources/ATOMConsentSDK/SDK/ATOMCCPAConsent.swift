@@ -5,7 +5,7 @@
 //  Created by Orkhan Alizada on 29.11.24.
 //
 
-public final class ATOMCCPAConsent {
+final class ATOMCCPAConsent {
     
     /// Standard CCPA string length (1YNY format)
     private let standardCCPALength = 4
@@ -18,7 +18,7 @@ public final class ATOMCCPAConsent {
     /// Initialize with a CCPA consent string
     /// - Parameter consentString: The CCPA consent string (e.g. "1YNY")
     /// - Throws: ATOMConsentError.invalidFormat if string is not valid CCPA format
-    public init(consentString: String) throws {
+    init(consentString: String) throws {
         guard consentString.count == self.standardCCPALength else {
             throw ATOMConsentError.invalidFormat
         }
