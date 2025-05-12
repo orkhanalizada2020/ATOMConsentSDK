@@ -16,7 +16,8 @@ let package = Package(
         // Targets can depend on other targets in this package and products from dependencies.
         .target(
             name: "ATOMConsentSDK",
-            dependencies: []
+            path: "Sources/ATOMConsentSDK",
+            exclude: ["ATOMConsentSDK.modulemap"], 
         ),
         .testTarget(
             name: "ATOMConsentSDKTests",

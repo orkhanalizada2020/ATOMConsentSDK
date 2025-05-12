@@ -22,7 +22,6 @@
 
 /* Begin PBXFileReference section */
 		6F33ACC52DCE239B003EC279 /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
-		6F39F5512CFE026800E86164 /* ATOMConsentSDK.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = ATOMConsentSDK.modulemap; sourceTree = "<group>"; };
 		6FA920DA2CED3663009770A6 /* ATOMConsentSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ATOMConsentSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6FA920E42CED3664009770A6 /* ATOMConsentSDKTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ATOMConsentSDKTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -63,6 +62,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6F8CA1A12DD20AD80019C7E4 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				6FA920DC2CED3663009770A6 /* ATOMConsentSDK */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		6F8CA1A22DD20B110019C7E4 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				6FA920E82CED3664009770A6 /* ATOMConsentSDKTests */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
 		6F9D0BB12CF89A01004A83DD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -73,10 +88,9 @@
 		6FA920D02CED3663009770A6 = {
 			isa = PBXGroup;
 			children = (
+				6F8CA1A12DD20AD80019C7E4 /* Sources */,
+				6F8CA1A22DD20B110019C7E4 /* Tests */,
 				6F33ACC52DCE239B003EC279 /* Package.swift */,
-				6F39F5512CFE026800E86164 /* ATOMConsentSDK.modulemap */,
-				6FA920DC2CED3663009770A6 /* ATOMConsentSDK */,
-				6FA920E82CED3664009770A6 /* ATOMConsentSDKTests */,
 				6F9D0BB12CF89A01004A83DD /* Frameworks */,
 				6FA920DB2CED3663009770A6 /* Products */,
 			);
@@ -257,7 +271,7 @@
 					"@loader_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				MODULEMAP_FILE = /Users/orkhanalizada/Developer/ATOMConsentSDK/ATOMConsentSDK.modulemap;
+				MODULEMAP_FILE = /Users/orkhanalizada/Developer/ATOMConsentSDK/Sources/ATOMConsentSDK/ATOMConsentSDK.modulemap;
 				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
 				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
 				ONLY_ACTIVE_ARCH = YES;
@@ -295,7 +309,7 @@
 					"@loader_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				MODULEMAP_FILE = /Users/orkhanalizada/Developer/ATOMConsentSDK/ATOMConsentSDK.modulemap;
+				MODULEMAP_FILE = /Users/orkhanalizada/Developer/ATOMConsentSDK/Sources/ATOMConsentSDK/ATOMConsentSDK.modulemap;
 				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
 				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
 				ONLY_ACTIVE_ARCH = YES;
