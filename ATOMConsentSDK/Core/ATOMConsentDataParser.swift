@@ -24,6 +24,7 @@ public final class ATOMConsentDataParser {
         ) else {
             throw ATOMConsentError.invalidBase64Encoding
         }
+        
         return data
     }
     

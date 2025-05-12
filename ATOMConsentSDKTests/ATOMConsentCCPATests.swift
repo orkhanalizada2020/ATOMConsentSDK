@@ -10,50 +10,37 @@ import XCTest
 
 class ATOMConsentCCPATests: XCTestCase {
     
-    var sut: ATOMCCPAConsent?
-    
     override func setUpWithError() throws {
         try super.setUpWithError()
     }
     
-    func testCCPA_Allowed_With_N() {
-        guard let sut = try? ATOMCCPAConsent(consentString: "--N-") else {
-            fatalError("Could not initialize ATOMCCPAConsent.")
-        }
-        
-        XCTAssertTrue(sut.isCCPACompliant())
+    // MARK: - CCPA Format Tests
+    
+    func testCCPA_Allowed_With_N() throws {
+        let sut = try ATOMConsentSDK(ccpaConsentString: "--N-")
+        XCTAssertTrue(sut.isSaleAllowed())
     }
     
-    func testCCPA_Allowed_With_Dash() {
-        guard let sut = try? ATOMCCPAConsent(consentString: "----") else {
-            fatalError("Could not initialize ATOMCCPAConsent.")
-        }
-        
-        XCTAssertTrue(sut.isCCPACompliant())
+    func testCCPA_Allowed_With_Dash() throws {
+        let sut = try ATOMConsentSDK(ccpaConsentString: "----")
+        XCTAssertTrue(sut.isSaleAllowed())
     }
     
-    func testCCPA_NOT_Allowed_With_Y() {
-        guard let sut = try? ATOMCCPAConsent(consentString: "--Y-") else {
-            fatalError("Could not initialize ATOMCCPAConsent.")
-        }
-        
-        XCTAssertFalse(sut.isCCPACompliant())
+    func testCCPA_NOT_Allowed_With_Y() throws {
+        let sut = try ATOMConsentSDK(ccpaConsentString: "--Y-")
+        XCTAssertFalse(sut.isSaleAllowed())
     }
     
-    func testCCPA_NOT_Allowed_With_MoreThan4Characters_5Chars() {
-        guard let sut = try? ATOMCCPAConsent(consentString: "--Y--") else {
-            fatalError("Could not initialize ATOMCCPAConsent.")
+    func testCCPA_NOT_Allowed_With_MoreThan4Characters_5Chars() throws {
+        XCTAssertThrowsError(try ATOMConsentSDK(ccpaConsentString: "--Y--")) { error in
+            XCTAssertEqual(error as? ATOMConsentError, .invalidFormat)
         }
-        
-        XCTAssertFalse(sut.isCCPACompliant())
     }
     
     func testCCPA_NOT_Allowed_With_LessThan4Characters_3Chars() {
-        guard let sut = try? ATOMCCPAConsent(consentString: "--Y") else {
-            fatalError("Could not initialize ATOMCCPAConsent.")
+        XCTAssertThrowsError(try ATOMConsentSDK(ccpaConsentString: "--Y")) { error in
+            XCTAssertEqual(error as? ATOMConsentError, .invalidFormat)
         }
-        
-        XCTAssertFalse(sut.isCCPACompliant())
     }
     
     override func tearDownWithError() throws {
