@@ -7,6 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6F8CA1A92DD211700019C7E4 /* ATOMATSException.h in Headers */ = {isa = PBXBuildFile; fileRef = 6F8CA1A62DD211700019C7E4 /* ATOMATSException.h */; };
+		6F8CA1AA2DD211700019C7E4 /* ATOMAppTransportSecuritySettings.h in Headers */ = {isa = PBXBuildFile; fileRef = 6F8CA1A42DD211700019C7E4 /* ATOMAppTransportSecuritySettings.h */; };
+		6F8CA1B22DD211750019C7E4 /* ATOMEndpoints.h in Headers */ = {isa = PBXBuildFile; fileRef = 6F8CA1AF2DD211750019C7E4 /* ATOMEndpoints.h */; };
+		6F8CA1B32DD211750019C7E4 /* ATOMDNSQuery.h in Headers */ = {isa = PBXBuildFile; fileRef = 6F8CA1AD2DD211750019C7E4 /* ATOMDNSQuery.h */; };
+		6F8CA1BB2DD2117A0019C7E4 /* ATOMGDPRLocationDetector.h in Headers */ = {isa = PBXBuildFile; fileRef = 6F8CA1B62DD2117A0019C7E4 /* ATOMGDPRLocationDetector.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6F8CA1BC2DD2117A0019C7E4 /* ATOMLGPDLocationDetector.h in Headers */ = {isa = PBXBuildFile; fileRef = 6F8CA1B82DD2117A0019C7E4 /* ATOMLGPDLocationDetector.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6F8CA1C52DD2117F0019C7E4 /* ATOMBrazilSIMCode.h in Headers */ = {isa = PBXBuildFile; fileRef = 6F8CA1C02DD2117F0019C7E4 /* ATOMBrazilSIMCode.h */; };
+		6F8CA1C62DD2117F0019C7E4 /* ATOMEuropeSIMCode.h in Headers */ = {isa = PBXBuildFile; fileRef = 6F8CA1C22DD2117F0019C7E4 /* ATOMEuropeSIMCode.h */; };
+		6F8CA1CE2DD211830019C7E4 /* ATOMSystemInformationProvider.h in Headers */ = {isa = PBXBuildFile; fileRef = 6F8CA1CB2DD211830019C7E4 /* ATOMSystemInformationProvider.h */; };
+		6F8CA1CF2DD211830019C7E4 /* ATOMSystemInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 6F8CA1C92DD211830019C7E4 /* ATOMSystemInfo.h */; };
+		6F8CA1D72DD211860019C7E4 /* ATOMBrazilTimezone.h in Headers */ = {isa = PBXBuildFile; fileRef = 6F8CA1D22DD211860019C7E4 /* ATOMBrazilTimezone.h */; };
+		6F8CA1D82DD211860019C7E4 /* ATOMEuropeTimezone.h in Headers */ = {isa = PBXBuildFile; fileRef = 6F8CA1D42DD211860019C7E4 /* ATOMEuropeTimezone.h */; };
 		6FA920E52CED3664009770A6 /* ATOMConsentSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FA920DA2CED3663009770A6 /* ATOMConsentSDK.framework */; };
 /* End PBXBuildFile section */
 
@@ -22,6 +34,18 @@
 
 /* Begin PBXFileReference section */
 		6F33ACC52DCE239B003EC279 /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
+		6F8CA1A42DD211700019C7E4 /* ATOMAppTransportSecuritySettings.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ATOMAppTransportSecuritySettings.h; sourceTree = "<group>"; };
+		6F8CA1A62DD211700019C7E4 /* ATOMATSException.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ATOMATSException.h; sourceTree = "<group>"; };
+		6F8CA1AD2DD211750019C7E4 /* ATOMDNSQuery.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ATOMDNSQuery.h; sourceTree = "<group>"; };
+		6F8CA1AF2DD211750019C7E4 /* ATOMEndpoints.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ATOMEndpoints.h; sourceTree = "<group>"; };
+		6F8CA1B62DD2117A0019C7E4 /* ATOMGDPRLocationDetector.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ATOMGDPRLocationDetector.h; sourceTree = "<group>"; };
+		6F8CA1B82DD2117A0019C7E4 /* ATOMLGPDLocationDetector.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ATOMLGPDLocationDetector.h; sourceTree = "<group>"; };
+		6F8CA1C02DD2117F0019C7E4 /* ATOMBrazilSIMCode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ATOMBrazilSIMCode.h; sourceTree = "<group>"; };
+		6F8CA1C22DD2117F0019C7E4 /* ATOMEuropeSIMCode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ATOMEuropeSIMCode.h; sourceTree = "<group>"; };
+		6F8CA1C92DD211830019C7E4 /* ATOMSystemInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ATOMSystemInfo.h; sourceTree = "<group>"; };
+		6F8CA1CB2DD211830019C7E4 /* ATOMSystemInformationProvider.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ATOMSystemInformationProvider.h; sourceTree = "<group>"; };
+		6F8CA1D22DD211860019C7E4 /* ATOMBrazilTimezone.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ATOMBrazilTimezone.h; sourceTree = "<group>"; };
+		6F8CA1D42DD211860019C7E4 /* ATOMEuropeTimezone.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ATOMEuropeTimezone.h; sourceTree = "<group>"; };
 		6FA920DA2CED3663009770A6 /* ATOMConsentSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ATOMConsentSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6FA920E42CED3664009770A6 /* ATOMConsentSDKTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ATOMConsentSDKTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -31,14 +55,18 @@
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			publicHeaders = (
 				ATOMConsentSDK.h,
-				Utilities/LocationAwareness/ATOMGDPRLocationDetector.h,
-				Utilities/LocationAwareness/ATOMLGPDLocationDetector.h,
 			);
 			target = 6FA920D92CED3663009770A6 /* ATOMConsentSDK */;
 		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
+		6F8CA1A82DD211700019C7E4 /* ATS */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = ATS; sourceTree = "<group>"; };
+		6F8CA1B12DD211750019C7E4 /* Configuration */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Configuration; sourceTree = "<group>"; };
+		6F8CA1BA2DD2117A0019C7E4 /* LocationAwareness */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = LocationAwareness; sourceTree = "<group>"; };
+		6F8CA1C42DD2117F0019C7E4 /* SIMCode */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = SIMCode; sourceTree = "<group>"; };
+		6F8CA1CD2DD211830019C7E4 /* System Info */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = "System Info"; sourceTree = "<group>"; };
+		6F8CA1D62DD211860019C7E4 /* Timezone */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Timezone; sourceTree = "<group>"; };
 		6FA920DC2CED3663009770A6 /* ATOMConsentSDK */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (6FA920EC2CED3664009770A6 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = ATOMConsentSDK; sourceTree = "<group>"; };
 		6FA920E82CED3664009770A6 /* ATOMConsentSDKTests */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = ATOMConsentSDKTests; sourceTree = "<group>"; };
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -65,6 +93,7 @@
 		6F8CA1A12DD20AD80019C7E4 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				6F8CA1A32DD211600019C7E4 /* Objective-C */,
 				6FA920DC2CED3663009770A6 /* ATOMConsentSDK */,
 			);
 			path = Sources;
@@ -76,6 +105,39 @@
 				6FA920E82CED3664009770A6 /* ATOMConsentSDKTests */,
 			);
 			path = Tests;
+			sourceTree = "<group>";
+		};
+		6F8CA1A32DD211600019C7E4 /* Objective-C */ = {
+			isa = PBXGroup;
+			children = (
+				6F8CA1DB2DD211990019C7E4 /* include */,
+				6F8CA1D62DD211860019C7E4 /* Timezone */,
+				6F8CA1CD2DD211830019C7E4 /* System Info */,
+				6F8CA1C42DD2117F0019C7E4 /* SIMCode */,
+				6F8CA1BA2DD2117A0019C7E4 /* LocationAwareness */,
+				6F8CA1B12DD211750019C7E4 /* Configuration */,
+				6F8CA1A82DD211700019C7E4 /* ATS */,
+			);
+			path = "Objective-C";
+			sourceTree = "<group>";
+		};
+		6F8CA1DB2DD211990019C7E4 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				6F8CA1A62DD211700019C7E4 /* ATOMATSException.h */,
+				6F8CA1A42DD211700019C7E4 /* ATOMAppTransportSecuritySettings.h */,
+				6F8CA1AF2DD211750019C7E4 /* ATOMEndpoints.h */,
+				6F8CA1AD2DD211750019C7E4 /* ATOMDNSQuery.h */,
+				6F8CA1B82DD2117A0019C7E4 /* ATOMLGPDLocationDetector.h */,
+				6F8CA1B62DD2117A0019C7E4 /* ATOMGDPRLocationDetector.h */,
+				6F8CA1C22DD2117F0019C7E4 /* ATOMEuropeSIMCode.h */,
+				6F8CA1C02DD2117F0019C7E4 /* ATOMBrazilSIMCode.h */,
+				6F8CA1CB2DD211830019C7E4 /* ATOMSystemInformationProvider.h */,
+				6F8CA1C92DD211830019C7E4 /* ATOMSystemInfo.h */,
+				6F8CA1D42DD211860019C7E4 /* ATOMEuropeTimezone.h */,
+				6F8CA1D22DD211860019C7E4 /* ATOMBrazilTimezone.h */,
+			);
+			path = include;
 			sourceTree = "<group>";
 		};
 		6F9D0BB12CF89A01004A83DD /* Frameworks */ = {
@@ -112,6 +174,18 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6F8CA1C52DD2117F0019C7E4 /* ATOMBrazilSIMCode.h in Headers */,
+				6F8CA1A92DD211700019C7E4 /* ATOMATSException.h in Headers */,
+				6F8CA1BC2DD2117A0019C7E4 /* ATOMLGPDLocationDetector.h in Headers */,
+				6F8CA1CE2DD211830019C7E4 /* ATOMSystemInformationProvider.h in Headers */,
+				6F8CA1D72DD211860019C7E4 /* ATOMBrazilTimezone.h in Headers */,
+				6F8CA1D82DD211860019C7E4 /* ATOMEuropeTimezone.h in Headers */,
+				6F8CA1B32DD211750019C7E4 /* ATOMDNSQuery.h in Headers */,
+				6F8CA1AA2DD211700019C7E4 /* ATOMAppTransportSecuritySettings.h in Headers */,
+				6F8CA1BB2DD2117A0019C7E4 /* ATOMGDPRLocationDetector.h in Headers */,
+				6F8CA1B22DD211750019C7E4 /* ATOMEndpoints.h in Headers */,
+				6F8CA1C62DD2117F0019C7E4 /* ATOMEuropeSIMCode.h in Headers */,
+				6F8CA1CF2DD211830019C7E4 /* ATOMSystemInfo.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -132,6 +206,12 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
+				6F8CA1A82DD211700019C7E4 /* ATS */,
+				6F8CA1B12DD211750019C7E4 /* Configuration */,
+				6F8CA1BA2DD2117A0019C7E4 /* LocationAwareness */,
+				6F8CA1C42DD2117F0019C7E4 /* SIMCode */,
+				6F8CA1CD2DD211830019C7E4 /* System Info */,
+				6F8CA1D62DD211860019C7E4 /* Timezone */,
 				6FA920DC2CED3663009770A6 /* ATOMConsentSDK */,
 			);
 			name = ATOMConsentSDK;
