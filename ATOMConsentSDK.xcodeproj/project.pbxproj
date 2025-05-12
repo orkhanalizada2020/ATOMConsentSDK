@@ -124,20 +124,68 @@
 		6F8CA1DB2DD211990019C7E4 /* include */ = {
 			isa = PBXGroup;
 			children = (
-				6F8CA1A62DD211700019C7E4 /* ATOMATSException.h */,
-				6F8CA1A42DD211700019C7E4 /* ATOMAppTransportSecuritySettings.h */,
-				6F8CA1AF2DD211750019C7E4 /* ATOMEndpoints.h */,
-				6F8CA1AD2DD211750019C7E4 /* ATOMDNSQuery.h */,
-				6F8CA1B82DD2117A0019C7E4 /* ATOMLGPDLocationDetector.h */,
-				6F8CA1B62DD2117A0019C7E4 /* ATOMGDPRLocationDetector.h */,
-				6F8CA1C22DD2117F0019C7E4 /* ATOMEuropeSIMCode.h */,
-				6F8CA1C02DD2117F0019C7E4 /* ATOMBrazilSIMCode.h */,
-				6F8CA1CB2DD211830019C7E4 /* ATOMSystemInformationProvider.h */,
-				6F8CA1C92DD211830019C7E4 /* ATOMSystemInfo.h */,
+				6F8CA1E12DD212CE0019C7E4 /* ATS */,
+				6F8CA1E02DD212C00019C7E4 /* Configuration */,
+				6F8CA1DF2DD212B10019C7E4 /* LocationAwareness */,
+				6F8CA1DE2DD2129F0019C7E4 /* SIMCode */,
+				6F8CA1DD2DD2128F0019C7E4 /* System Info */,
+				6F8CA1DC2DD212780019C7E4 /* Timezone */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		6F8CA1DC2DD212780019C7E4 /* Timezone */ = {
+			isa = PBXGroup;
+			children = (
 				6F8CA1D42DD211860019C7E4 /* ATOMEuropeTimezone.h */,
 				6F8CA1D22DD211860019C7E4 /* ATOMBrazilTimezone.h */,
 			);
-			path = include;
+			path = Timezone;
+			sourceTree = "<group>";
+		};
+		6F8CA1DD2DD2128F0019C7E4 /* System Info */ = {
+			isa = PBXGroup;
+			children = (
+				6F8CA1CB2DD211830019C7E4 /* ATOMSystemInformationProvider.h */,
+				6F8CA1C92DD211830019C7E4 /* ATOMSystemInfo.h */,
+			);
+			path = "System Info";
+			sourceTree = "<group>";
+		};
+		6F8CA1DE2DD2129F0019C7E4 /* SIMCode */ = {
+			isa = PBXGroup;
+			children = (
+				6F8CA1C22DD2117F0019C7E4 /* ATOMEuropeSIMCode.h */,
+				6F8CA1C02DD2117F0019C7E4 /* ATOMBrazilSIMCode.h */,
+			);
+			path = SIMCode;
+			sourceTree = "<group>";
+		};
+		6F8CA1DF2DD212B10019C7E4 /* LocationAwareness */ = {
+			isa = PBXGroup;
+			children = (
+				6F8CA1B82DD2117A0019C7E4 /* ATOMLGPDLocationDetector.h */,
+				6F8CA1B62DD2117A0019C7E4 /* ATOMGDPRLocationDetector.h */,
+			);
+			path = LocationAwareness;
+			sourceTree = "<group>";
+		};
+		6F8CA1E02DD212C00019C7E4 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				6F8CA1AF2DD211750019C7E4 /* ATOMEndpoints.h */,
+				6F8CA1AD2DD211750019C7E4 /* ATOMDNSQuery.h */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		6F8CA1E12DD212CE0019C7E4 /* ATS */ = {
+			isa = PBXGroup;
+			children = (
+				6F8CA1A62DD211700019C7E4 /* ATOMATSException.h */,
+				6F8CA1A42DD211700019C7E4 /* ATOMAppTransportSecuritySettings.h */,
+			);
+			path = ATS;
 			sourceTree = "<group>";
 		};
 		6F9D0BB12CF89A01004A83DD /* Frameworks */ = {
