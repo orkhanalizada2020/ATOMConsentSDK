@@ -42,4 +42,48 @@ class ATOMTCFConsentPurposeTests: XCTestCase {
         XCTAssertFalse(sut.arePurposesAllowed([1, 3, 5, 7, 9, 10]), "Purposes 1, 3, 7, 9, and 10 should be allowed, 5 **not** should be allowed and test should fail.")
     }
     
+    func testPurposeBoundaries() throws {
+        let sut = try ATOMConsentSDK(tcfConsentString: tcf)
+        
+        // Test with purpose ID 0 (should be invalid)
+        XCTAssertFalse(sut.isPurposeAllowed(0), "Purpose 0 should not be allowed (invalid ID)")
+        
+        // Test with large purpose ID
+        XCTAssertFalse(sut.isPurposeAllowed(50), "Purpose 50 should not be allowed (out of range)")
+        
+        // Test empty purpose array
+        XCTAssertTrue(sut.arePurposesAllowed([]), "Empty purpose array should return true")
+    }
+    
+    func testPurposeCombinations() throws {
+        let sut = try ATOMConsentSDK(tcfConsentString: tcf)
+        
+        // Mix of multiple allowed and disallowed purposes
+        XCTAssertFalse(sut.arePurposesAllowed([1, 2, 3]), "Should fail with mix of allowed and disallowed purposes")
+        
+        // Duplicate purposes
+        XCTAssertTrue(sut.arePurposesAllowed([1, 1, 3]), "Duplicate allowed purposes should still be allowed")
+        XCTAssertFalse(sut.arePurposesAllowed([1, 2, 2]), "Duplicate disallowed purposes should still be disallowed")
+        
+        // Purpose IDs in non-sequential order
+        XCTAssertTrue(sut.arePurposesAllowed([3, 1]), "Non-sequential allowed purposes should be allowed")
+    }
+    
+    func testTrackingAllowedWithPurposes() throws {
+        let sut = try ATOMConsentSDK(tcfConsentString: tcf)
+        
+        // Test tracking allowed with only purposes, no vendor
+        XCTAssertTrue(sut.isTrackingAllowed(purposeIDs: [1, 3]), "Tracking should be allowed with allowed purposes")
+        XCTAssertFalse(sut.isTrackingAllowed(purposeIDs: [1, 2]), "Tracking should not be allowed with disallowed purpose")
+        
+        // Test with empty purpose array
+        XCTAssertTrue(sut.isTrackingAllowed(purposeIDs: []), "Tracking should be allowed with empty purpose array")
+    }
+    
+    func testInvalidTCFString() {
+        XCTAssertThrowsError(try ATOMConsentSDK(tcfConsentString: "invalidString")) { error in
+            XCTAssertTrue(error is ATOMConsentError, "Should throw ATOMConsentError")
+        }
+    }
+    
 }

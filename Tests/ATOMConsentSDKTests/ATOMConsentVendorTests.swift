@@ -32,4 +32,48 @@ class ATOMTCFConsentVendorTests: XCTestCase {
         XCTAssertTrue(sut.isVendorAllowed(512), "Vendor 512 should be allowed")
     }
     
+    func testDirectTCFConsentInit() throws {
+        let tcfConsent = try ATOMTCFConsent(withConsentString: tcf)
+        XCTAssertTrue(tcfConsent.isVendorAllowed(100), "Direct TCFConsent should report vendor 100 as allowed")
+        XCTAssertFalse(tcfConsent.isVendorAllowed(99), "Direct TCFConsent should report vendor 99 as not allowed")
+    }
+    
+    func testInvalidTCFString() {
+        XCTAssertThrowsError(try ATOMConsentSDK(tcfConsentString: "invalidString")) { error in
+            XCTAssertTrue(error is ATOMConsentError, "Should throw ATOMConsentError")
+        }
+    }
+    
+    func testVendorIDOutOfRange() throws {
+        let sut = try ATOMConsentSDK(tcfConsentString: tcf)
+        XCTAssertFalse(sut.isVendorAllowed(10000), "Vendor 10000 should be out of range and not allowed")
+    }
+    
+    func testEdgeCaseVendorIDs() throws {
+        let sut = try ATOMConsentSDK(tcfConsentString: tcf)
+        
+        // Test with vendor ID 0 (should be invalid)
+        XCTAssertFalse(sut.isVendorAllowed(0), "Vendor 0 should not be allowed (invalid ID)")
+        
+        // Test with max valid vendor ID from the consent data
+        let validator = try ATOMTCFConsentValidator(consentData: try ATOMConsentDataParser.parse(consentString: tcf.split(separator: ".").first.map(String.init) ?? tcf))
+        let maxVendorId = validator.maxVendorIdForConsents
+        
+        XCTAssertFalse(sut.isVendorAllowed(Int16(Int(maxVendorId) + 1)), "Vendor beyond max should not be allowed")
+    }
+    
+    func testMultipleVendors() throws {
+        let sut = try ATOMConsentSDK(tcfConsentString: tcf)
+        
+        let allowedVendors: [Int16] = [100, 512]
+        for vendorId in allowedVendors {
+            XCTAssertTrue(sut.isVendorAllowed(vendorId), "Vendor \(vendorId) should be allowed")
+        }
+        
+        let disallowedVendors: [Int16] = [99, 494]
+        for vendorId in disallowedVendors {
+            XCTAssertFalse(sut.isVendorAllowed(vendorId), "Vendor \(vendorId) should not be allowed")
+        }
+    }
+    
 }
