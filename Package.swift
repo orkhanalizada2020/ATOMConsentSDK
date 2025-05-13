@@ -21,6 +21,9 @@ let package = Package(
         .target(
             name: "ATOMConsentSDK",
             dependencies: ["Objective-C"],
+            swiftSettings: [
+                .unsafeFlags(["-enable-library-evolution"])
+            ]
         ),
         .testTarget(
             name: "ATOMConsentSDKTests",
