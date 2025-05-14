@@ -5,6 +5,8 @@
 //  Created by Orkhan Alizada on 19.11.24.
 //
 
+import Foundation
+
 enum ATOMConsentError: Error {
     case invalidBase64Encoding
     case parsingFailed

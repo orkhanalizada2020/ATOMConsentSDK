@@ -93,7 +93,7 @@
 		6F8CA1A12DD20AD80019C7E4 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				6F8CA1A32DD211600019C7E4 /* Objective-C */,
+				6F8CA1A32DD211600019C7E4 /* ATOMConsentSDKObjectiveC */,
 				6FA920DC2CED3663009770A6 /* ATOMConsentSDK */,
 			);
 			path = Sources;
@@ -107,7 +107,7 @@
 			path = Tests;
 			sourceTree = "<group>";
 		};
-		6F8CA1A32DD211600019C7E4 /* Objective-C */ = {
+		6F8CA1A32DD211600019C7E4 /* ATOMConsentSDKObjectiveC */ = {
 			isa = PBXGroup;
 			children = (
 				6F8CA1DB2DD211990019C7E4 /* include */,
@@ -118,7 +118,7 @@
 				6F8CA1B12DD211750019C7E4 /* Configuration */,
 				6F8CA1A82DD211700019C7E4 /* ATS */,
 			);
-			path = "Objective-C";
+			path = ATOMConsentSDKObjectiveC;
 			sourceTree = "<group>";
 		};
 		6F8CA1DB2DD211990019C7E4 /* include */ = {
@@ -128,7 +128,7 @@
 				6F8CA1E02DD212C00019C7E4 /* Configuration */,
 				6F8CA1DF2DD212B10019C7E4 /* LocationAwareness */,
 				6F8CA1DE2DD2129F0019C7E4 /* SIMCode */,
-				6F8CA1DD2DD2128F0019C7E4 /* System Info */,
+				6F8CA1DD2DD2128F0019C7E4 /* SystemInfo */,
 				6F8CA1DC2DD212780019C7E4 /* Timezone */,
 			);
 			path = include;
@@ -143,13 +143,13 @@
 			path = Timezone;
 			sourceTree = "<group>";
 		};
-		6F8CA1DD2DD2128F0019C7E4 /* System Info */ = {
+		6F8CA1DD2DD2128F0019C7E4 /* SystemInfo */ = {
 			isa = PBXGroup;
 			children = (
 				6F8CA1CB2DD211830019C7E4 /* ATOMSystemInformationProvider.h */,
 				6F8CA1C92DD211830019C7E4 /* ATOMSystemInfo.h */,
 			);
-			path = "System Info";
+			path = SystemInfo;
 			sourceTree = "<group>";
 		};
 		6F8CA1DE2DD2129F0019C7E4 /* SIMCode */ = {

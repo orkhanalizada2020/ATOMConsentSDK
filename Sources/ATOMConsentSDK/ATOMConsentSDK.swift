@@ -5,6 +5,8 @@
 //  Created by Orkhan Alizada on 09.05.25.
 //
 
+import ATOMConsentSDKObjectiveC
+
 public final class ATOMConsentSDK {
     
     private var tcfConsent: ATOMTCFConsent?
@@ -77,7 +79,6 @@ public final class ATOMConsentSDK {
         
         self.init(tcfConsent: tcfConsent, ccpaConsent: ccpaConsent)
     }
-    
     
     public func isSubjectToGDPR() -> Bool {
         ATOMGDPRLocationDetector.isSubjectToLocationAware()
