@@ -5,7 +5,7 @@
 //  Created by Orkhan Alizada on 09.05.25.
 //
 
-final class ATOMConsentSDK {
+public final class ATOMConsentSDK {
     
     private var tcfConsent: ATOMTCFConsent?
     private var ccpaConsent: ATOMCCPAConsent?
@@ -57,6 +57,34 @@ final class ATOMConsentSDK {
         }
         
         self.init(ccpaConsent: ccpaConsent)
+    }
+    
+    /// Initialize with consent strings
+    /// - Parameters:
+    ///   - tcfConsentString: TCF consent string
+    /// - Throws: ATOMConsentError if any consent string is invalid
+    public convenience init(tcfConsentString: String? = nil, ccpaConsentString: String? = nil) throws {
+        var tcfConsent: ATOMTCFConsent?
+        var ccpaConsent: ATOMCCPAConsent?
+                
+        if let tcfString = tcfConsentString {
+            tcfConsent = try ATOMTCFConsent(withConsentString: tcfString)
+        }
+        
+        if let ccpaString = ccpaConsentString {
+            ccpaConsent = try ATOMCCPAConsent(consentString: ccpaString)
+        }
+        
+        self.init(tcfConsent: tcfConsent, ccpaConsent: ccpaConsent)
+    }
+    
+    
+    public func isSubjectToGDPR() -> Bool {
+        ATOMGDPRLocationDetector.isSubjectToLocationAware()
+    }
+    
+    public func isSubjectToCCPA() -> Bool {
+        ATOMLGPDLocationDetector.isSubjectToLocationAware()
     }
     
     /// Check if a vendor has consent based on TCF
