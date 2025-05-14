@@ -19,6 +19,7 @@ final class ATOMCCPAConsent {
     /// - Parameter consentString: The CCPA consent string (e.g. "1YNY")
     /// - Throws: ATOMConsentError.invalidFormat if string is not valid CCPA format
     init(consentString: String) throws {
+        let consentString = consentString.trimmingCharacters(in: .whitespacesAndNewlines)
         guard consentString.count == self.standardCCPALength else {
             throw ATOMConsentError.invalidFormat
         }

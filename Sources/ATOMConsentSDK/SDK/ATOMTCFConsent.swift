@@ -20,7 +20,7 @@ public final class ATOMTCFConsent {
     /// - Throws: ATOMConsentError if the string cannot be parsed
     public init(withConsentString consentString: String) throws {
         do {
-            let consentString = consentString.split(separator: ".").first.map(String.init) ?? consentString
+            let consentString = consentString.trimmingCharacters(in: .whitespacesAndNewlines).split(separator: ".").first.map(String.init) ?? consentString
             consentData = try ATOMConsentDataParser.parse(consentString: consentString)
         } catch ATOMConsentError.invalidBase64Encoding {
             throw ATOMConsentError.invalidBase64Encoding
